@@ -1,5 +1,5 @@
 ---
-title: "Sensors"
+title: "Sentinel-2"
 subtitle: "CASA0023 Remote Sensing Cities and Environment<br /> Week 2 Presentation"
 author: "Soki Kimura"
 institute: "UCL Bartlett Centre for Advanced Spatial Analysis"
@@ -18,26 +18,24 @@ class: inverse, center, middle
 options(htmltools.dir.version = FALSE)
 ```
 
-# Introduction to Sensors
-
+# Introduction to Sentinel-2
 
 ???
 
 ---
 
-# Two types of sensors 
+# SENTINEL-2
 
-.pull-left[
-## Passive Sensors
-
-- Sensors
-
-]
+Sentinel-2 is a constellation of two satellites in the same orbit, monitoring Earth's surface changes.
 
 
-.pull-right[
-## Active Sensors
-]
+> ### Specifications
+> 
+> - Operation since: 2015 (Sentinel-2A) / 2017 (2B)
+> - Temporal Resolution: 5 days (10 days with one satellite) on equator
+> 
+
+
 
 ---
 
