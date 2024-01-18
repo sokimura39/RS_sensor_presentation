@@ -1,0 +1,46 @@
+---
+title: "Sensors"
+subtitle: "CASA0023 Remote Sensing Cities and Environment<br /> Week 2 Presentation"
+author: "Soki Kimura"
+institute: "UCL Bartlett Centre for Advanced Spatial Analysis"
+date: "2023/1/16 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse, center, middle
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Introduction to Sensors
+
+
+???
+
+---
+
+# Two types of sensors 
+
+.pull-left[
+## Passive Sensors
+
+- Sensors
+
+]
+
+
+.pull-right[
+## Active Sensors
+]
+
+---
+
+
+
+---
