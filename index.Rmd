@@ -1,5 +1,5 @@
 ---
-title: "Sentinel-2"
+title: "ALOS Project"
 subtitle: "CASA0023 Remote Sensing Cities and Environment<br /> Week 2 Presentation"
 author: "Soki Kimura"
 institute: "UCL Bartlett Centre for Advanced Spatial Analysis"
@@ -18,27 +18,156 @@ class: inverse, center, middle
 options(htmltools.dir.version = FALSE)
 ```
 
-# Introduction to Sentinel-2
+![](https://www.satnavi.jaxa.jp/ja/wp-content/themes/SateNavi/assets/img/eg/top/project_block01_img01.jpg)
 
-???
+
+# Introduction to the ALOS Project
 
 ---
 
-# SENTINEL-2
+# ALOS Project
 
-Sentinel-2 is a constellation of two satellites in the same orbit, monitoring Earth's surface changes.
+ALOS (Advanced Land Observing Satellite) Project is a series of Japanese earth observation satellites. The latest one was *supposed to be* the ALOS-3 satellite.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+
+knitr::include_graphics('https://earth.jaxa.jp/en/wp-content/uploads/sites/2/2021/09/en_illust_09.png')
+
+```
+
+Earth observation satellites from Japan
 
 
-> ### Specifications
+---
+
+# The Satellites
+
+
+.pull-left[
+
+#### ALOS (Daichi)
+
+![ALOS Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image.png)
+
+
+]
+
+
+.pull-right[
+
+#### ALOS-2 (Daichi-2)
+
+![ALOS-2 Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-11.png)
+
+]
+
+.pull-left[
+
+- Operation: 2006 - 2011
+- Sensors: 
+  - PALSAR (Active Radar)
+  - PRISM (Panchromatic) 
+  - AVENIR (RGB + NIR)
+- Significance lies in the fact that there were multiple sensors in one satellite, allowing for detailed observation
+
+]
+
+.pull-right[
+
+- Operation: 2014 - present
+- Sensor: PALSAR-2 (Active Radar)
+- Launched as successor to the PALSAR radar in ALOS
+
+> *'Daichi'*: 「**大地**」 <br \>
+> 'Vast land' in Japanese
+
+]
+
+---
+
+# Future projects
+
+.pull-left[
+
+#### ALOS-3 (failed)
+
+![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/06/top_image.png)
+
+- Launched in 2023, but failed
+- Sensor: 6 bands (including RGB, NIR)
+- Had a spatial resolution of 0.7 m
+- Designed as a successor to the AVENIR in ALOS; loss of this satellite cast a shadow in the future earth observation
+
+
+]
+
+
+.pull-right[
+
+#### ALOS-4
+
+![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-1.png)
+
+- Planned launch in 2024
+- Sensor: Radar
+- Planned as successor to ALOS-2
+- Cannot be a substitute for the loss of ALOS-3, due to the difference in bands.
+
+]
+
+---
+
+# Applications: Disaster observation
+
+Observing of disasters is one of the focus areas by ALOS. [(JAXA, 2011)](https://www.eorc.jaxa.jp/ALOS/en/img_up/dis_opt_tohokueq_110314.htm)
+
+#### Aftermath of the Great East Japan Earthquake (2011)
+
+![](https://www.eorc.jaxa.jp/ALOS/new/opt_110328_tohoku/l_dis_av2_tohokueq_110328_f8.jpg)
+
+The image of the coastline near Natori, Miyagi, Japan. Image taken 2 weeks after (left), 3 days after (centre), and before the earthquake and tsunami (right). We can see the tsunami-impacted ares in the centre, and the flooding ceased after 2 weeks.
+
+---
+
+# Applications: Vegetation analysis
+
+
+![](https://www.eorc.jaxa.jp/ALOS/jp/dataset/images/Global_fnf-mosaic_2019-2017.jpg)
+
+Deforestation occuring worldwide has been observed, using the Radar image from Daichi-2. Downloadable for further research and analysis.
+
+---
+
+# Reflection
+
+The ALOS projects have contributed to the growth of Japanese earth observation, with observation available for various wavelengths.
+
+Disaster observation is of importance to the Japanese community as a whole. Global observation enables analysis for disasters worldwide, recent example being the [earthquake in Turkey](https://earth.jaxa.jp/en/earthview/2023/02/14/7381/index.html).
+
+The failure of ALOS-3 may impact the earth observation of Japan, especially with the importance lying in disaster management that happens every once in a while.
+
+> Japan has this past of losing a weather forcast satellite in 2003, forcing them to lend satellite data from the US for a few years. <br \> 
 > 
-> - Operation since: 2015 (Sentinel-2A) / 2017 (2B)
-> - Temporal Resolution: 5 days (10 days with one satellite) on equator
-> 
+> SO BAD we don't learn from mistakes!
 
+### To Do: Use the data from ALOS!
 
-
----
-
-
+I personally feel proud my country is using their own satellites for earth observation. I hope to dig further in to this dataset, and see what we can do!
 
 ---
+
+# References
+
+ALOSによる災害観測. (no date). Available at: https://www.eorc.jaxa.jp/ALOS/img_up/jdis_opt_tohokueq_110328.htm (Accessed: 23 January 2024).
+
+Dataset | ALOS@EORC. (no date). ALOS@EORC Homepage. Available at: https://www.eorc.jaxa.jp/ALOS/index_e.htm (Accessed: 23 January 2024).
+
+Earth Science Data Systems, N. (2020). What is Synthetic Aperture Radar? | Earthdata. Earth Science Data Systems, NASA. Available at: https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar (Accessed: 23 January 2024).
+
+JAXA Satellite Navigator / Space Technology Directorate I. (no date). Available at: https://www.satnavi.jaxa.jp/en/ (Accessed: 23 January 2024).
+
+MTSat 1, 1R (Himawari 6). (no date). Gunter’s Space Page. Available at: https://space.skyrocket.de/doc_sdat/mtsat-1.htm (Accessed: 23 January 2024).
+
+Observing of disaster by ALOS. (no date). Available at: https://www.eorc.jaxa.jp/ALOS/en/img_up/dis_opt_tohokueq_110314.htm (Accessed: 23 January 2024).
+
+
