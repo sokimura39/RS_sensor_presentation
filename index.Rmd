@@ -15,7 +15,21 @@ output:
 class: inverse, center, middle
 
 ```{r setup, include=FALSE}
+library(RefManageR)
+library(knitcitations)
+
 options(htmltools.dir.version = FALSE)
+
+# Citing Options
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib <- ReadBib("./w2_slides.bib", check = FALSE)
+
 ```
 
 ![](https://www.satnavi.jaxa.jp/ja/wp-content/themes/SateNavi/assets/img/eg/top/project_block01_img01.jpg)
@@ -78,8 +92,9 @@ Earth observation satellites from Japan
 - Sensor: PALSAR-2 (Active Radar)
 - Launched as successor to the PALSAR radar in ALOS
 
-> *'Daichi'*: 「**大地**」 <br \>
-> 'Vast land' in Japanese
+> *'Daichi'*: 「**大地**」'land'
+
+Sources: `r Citet(myBib, 'jaxa2023a')`, `r Citet(myBib, 'jaxa2024')`, `r Citet(myBib, 'nasaearthsciencedatasystems2020')`
 
 ]
 
@@ -113,13 +128,15 @@ Earth observation satellites from Japan
 - Planned as successor to ALOS-2
 - Cannot be a substitute for the loss of ALOS-3, due to the difference in bands.
 
+Source: `r Citep(myBib, 'jaxaa', 'jaxab')`
+
 ]
 
 ---
 
 # Applications: Disaster observation
 
-Observing of disasters is one of the focus areas by ALOS. [(JAXA, 2011)](https://www.eorc.jaxa.jp/ALOS/en/img_up/dis_opt_tohokueq_110314.htm)
+Observing of disasters is one of the focus areas by ALOS. `r Citep(myBib, 'jaxa2011', 'jaxa2011a')`
 
 #### Aftermath of the Great East Japan Earthquake (2011)
 
@@ -142,13 +159,11 @@ Deforestation occuring worldwide has been observed, using the Radar image from D
 
 The ALOS projects have contributed to the growth of Japanese earth observation, with observation available for various wavelengths.
 
-Disaster observation is of importance to the Japanese community as a whole. Global observation enables analysis for disasters worldwide, recent example being the [earthquake in Turkey](https://earth.jaxa.jp/en/earthview/2023/02/14/7381/index.html).
+Disaster observation is of importance to the Japanese community as a whole. Global observation enables analysis for disasters worldwide, recent example being the earthquake in Turkey `r Citep(myBib, 'jaxa2023')`.
 
 The failure of ALOS-3 may impact the earth observation of Japan, especially with the importance lying in disaster management that happens every once in a while.
 
-> Japan has this past of losing a weather forcast satellite in 2003, forcing them to lend satellite data from the US for a few years. <br \> 
-> 
-> SO BAD we don't learn from mistakes!
+> Japan has this past of losing a weather forcast satellite in 2003, forcing them to lend satellite data from the US for a few years. Hope the next ones will succeed!
 
 ### To Do: Use the data from ALOS!
 
@@ -158,16 +173,10 @@ I personally feel proud my country is using their own satellites for earth obser
 
 # References
 
-ALOSによる災害観測. (no date). Available at: https://www.eorc.jaxa.jp/ALOS/img_up/jdis_opt_tohokueq_110328.htm (Accessed: 23 January 2024).
+```{r results='asis', echo=FALSE}
 
-Dataset | ALOS@EORC. (no date). ALOS@EORC Homepage. Available at: https://www.eorc.jaxa.jp/ALOS/index_e.htm (Accessed: 23 January 2024).
 
-Earth Science Data Systems, N. (2020). What is Synthetic Aperture Radar? | Earthdata. Earth Science Data Systems, NASA. Available at: https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar (Accessed: 23 January 2024).
+PrintBibliography(myBib)
 
-JAXA Satellite Navigator / Space Technology Directorate I. (no date). Available at: https://www.satnavi.jaxa.jp/en/ (Accessed: 23 January 2024).
-
-MTSat 1, 1R (Himawari 6). (no date). Gunter’s Space Page. Available at: https://space.skyrocket.de/doc_sdat/mtsat-1.htm (Accessed: 23 January 2024).
-
-Observing of disaster by ALOS. (no date). Available at: https://www.eorc.jaxa.jp/ALOS/en/img_up/dis_opt_tohokueq_110314.htm (Accessed: 23 January 2024).
-
+```
 
