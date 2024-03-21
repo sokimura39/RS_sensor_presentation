@@ -3,16 +3,17 @@ title: "ALOS Project"
 subtitle: "CASA0023 Remote Sensing Cities and Environment<br /> Week 2 Presentation"
 author: "Soki Kimura"
 institute: "UCL Bartlett Centre for Advanced Spatial Analysis"
-date: "2023/1/16 (updated: `r Sys.Date()`)"
+date: "2023/3/21"
 output:
   xaringan::moon_reader:
+    css: xaringan-themer.css
     lib_dir: libs
     nature:
+      ratio: '16:9'
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: inverse, center, middle
 
 ```{r setup, include=FALSE}
 library(RefManageR)
@@ -32,18 +33,22 @@ myBib <- ReadBib("./w2_slides.bib", check = FALSE)
 
 ```
 
-![](https://www.satnavi.jaxa.jp/ja/wp-content/themes/SateNavi/assets/img/eg/top/project_block01_img01.jpg)
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+# library(xaringanthemer)
+# style_mono_accent(
+#   base_color = "#FF6969",
+#   header_font_google = google_font("Fira Sans"),
+#   text_font_google   = google_font("Fira Sans Condensed", "300", "300i"),
+#   code_font_google   = google_font("Fira Mono")
+# )
+```
 
-# Introduction to the ALOS Project
+## ALOS Project
 
----
+.pull-left[
 
-# ALOS Project
-
-ALOS (Advanced Land Observing Satellite) Project is a series of Japanese earth observation satellites. The latest one was *supposed to be* the ALOS-3 satellite.
-
-```{r echo=FALSE, out.width='60%', fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 
 knitr::include_graphics('https://earth.jaxa.jp/en/wp-content/uploads/sites/2/2021/09/en_illust_09.png')
 
@@ -51,18 +56,34 @@ knitr::include_graphics('https://earth.jaxa.jp/en/wp-content/uploads/sites/2/202
 
 Earth observation satellites from Japan
 
+]
+
+.pull-right[
+
+ALOS (Advanced Land Observing Satellite) Project is a series of Japanese earth observation satellites. The latest one was *supposed to be* the ALOS-3 satellite.
+
+There have been 2 satellites that have been launched in the past - ALOS 1 and 2.
+
+ALOS 3 has failed to launch, and ALOS 4 is under development.
+
+These satellites are a combination of SAR satellites and optical imagery observation satellites - they make up the main satellites for Japanese earth observation.
+
+]
 
 ---
 
-# The Satellites
+## The Satellites
 
 
 .pull-left[
 
 #### ALOS (Daichi)
 
-![ALOS Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image.png)
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 
+knitr::include_graphics('https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image.png')
+
+```
 
 ]
 
@@ -71,7 +92,12 @@ Earth observation satellites from Japan
 
 #### ALOS-2 (Daichi-2)
 
-![ALOS-2 Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-11.png)
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+
+knitr::include_graphics('https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-11.png')
+
+```
 
 ]
 
@@ -92,7 +118,7 @@ Earth observation satellites from Japan
 - Sensor: PALSAR-2 (Active Radar)
 - Launched as successor to the PALSAR radar in ALOS
 
-> *'Daichi'*: 「**大地**」'land'
+> The name *'Daichi'*: 「**大地**」literally means **land**
 
 Sources: `r Citet(myBib, 'jaxa2023a')`, `r Citet(myBib, 'jaxa2024')`, `r Citet(myBib, 'nasaearthsciencedatasystems2020')`
 
@@ -100,62 +126,96 @@ Sources: `r Citet(myBib, 'jaxa2023a')`, `r Citet(myBib, 'jaxa2024')`, `r Citet(m
 
 ---
 
-# Future projects
+## Future projects
 
 .pull-left[
 
 #### ALOS-3 (failed)
 
-![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/06/top_image.png)
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+
+knitr::include_graphics('https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/06/top_image.png')
+
+```
+
+]
+
+.pull-right[
+
+#### ALOS-4
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+
+knitr::include_graphics('https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-1.png')
+
+```
+
+]
+
+.pull-left[
 
 - Launched in 2023, but failed
 - Sensor: 6 bands (including RGB, NIR)
 - Had a spatial resolution of 0.7 m
 - Designed as a successor to the AVENIR in ALOS; loss of this satellite cast a shadow in the future earth observation
 
-
 ]
 
-
 .pull-right[
-
-#### ALOS-4
-
-![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-1.png)
 
 - Planned launch in 2024
 - Sensor: Radar
 - Planned as successor to ALOS-2
 - Cannot be a substitute for the loss of ALOS-3, due to the difference in bands.
 
-Source: `r Citep(myBib, 'jaxaa', 'jaxab')`
+Source: `r Citep(myBib, 'jaxa2023', 'jaxa2024')`
 
 ]
 
 ---
 
-# Applications: Disaster observation
-
-Observing of disasters is one of the focus areas by ALOS. `r Citep(myBib, 'jaxa2011', 'jaxa2011a')`
+## Applications: Disaster observation
 
 #### Aftermath of the Great East Japan Earthquake (2011)
 
-![](https://www.eorc.jaxa.jp/ALOS/new/opt_110328_tohoku/l_dis_av2_tohokueq_110328_f8.jpg)
+Observing of disasters is one of the focus areas by ALOS. `r Citep(myBib, 'jaxa2011', 'jaxa2011a')`
+
+
+```{r echo=FALSE, out.width='70%', fig.align='center'}
+
+knitr::include_graphics('https://www.eorc.jaxa.jp/ALOS/new/opt_110328_tohoku/l_dis_av2_tohokueq_110328_f8.jpg')
+
+```
 
 The image of the coastline near Natori, Miyagi, Japan. Image taken 2 weeks after (left), 3 days after (centre), and before the earthquake and tsunami (right). We can see the tsunami-impacted ares in the centre, and the flooding ceased after 2 weeks.
 
 ---
 
-# Applications: Vegetation analysis
+## Applications: Vegetation analysis
 
+```{r echo=FALSE, out.width='70%', fig.align='center'}
 
-![](https://www.eorc.jaxa.jp/ALOS/jp/dataset/images/Global_fnf-mosaic_2019-2017.jpg)
+knitr::include_graphics('https://www.eorc.jaxa.jp/ALOS/jp/dataset/images/Global_fnf-mosaic_2019-2017.jpg')
 
-Deforestation occuring worldwide has been observed, using the Radar image from Daichi-2. Downloadable for further research and analysis.
+```
+
+Deforestation occuring worldwide has been observed, using the Radar image from Daichi-2.
+`r Citet(myBib, 'whittle2012')` explored the deforestation of Sumatra, Indonesia using this dataset - an automatic deforestation detection was made possible, enabling them for simultaneous detection.
 
 ---
 
-# Reflection
+## Applications: Notes
+
+The 2 research papers I have found using the ALOS data are both in Asia.
+
+Being the Japanese alternative to the NASA and ESA ovservations, it may be interesting to figure out whether there is a regional preference toward using these observations compared to the alternatives.
+
+There seems to be a lot of research comparing the observations of the multiple suites of satellites.
+
+
+---
+
+## Reflection
 
 The ALOS projects have contributed to the growth of Japanese earth observation, with observation available for various wavelengths.
 
@@ -171,10 +231,9 @@ I personally feel proud my country is using their own satellites for earth obser
 
 ---
 
-# References
+## References
 
-```{r results='asis', echo=FALSE}
-
+```{r echo=FALSE, warning=FALSE, results='asis'}
 
 PrintBibliography(myBib)
 

@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Soki Kimura" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -25,42 +24,49 @@ class: center, middle, inverse, title-slide
 ### UCL Bartlett Centre for Advanced Spatial Analysis
 ]
 .date[
-### 2023/1/16 (updated: 2024-01-24)
+### 2023/3/21
 ]
 
 ---
 
-class: inverse, center, middle
 
 
 
-![](https://www.satnavi.jaxa.jp/ja/wp-content/themes/SateNavi/assets/img/eg/top/project_block01_img01.jpg)
 
 
-# Introduction to the ALOS Project
 
----
+## ALOS Project
 
-# ALOS Project
+.pull-left[
 
-ALOS (Advanced Land Observing Satellite) Project is a series of Japanese earth observation satellites. The latest one was *supposed to be* the ALOS-3 satellite.
-
-&lt;img src="https://earth.jaxa.jp/en/wp-content/uploads/sites/2/2021/09/en_illust_09.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://earth.jaxa.jp/en/wp-content/uploads/sites/2/2021/09/en_illust_09.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 Earth observation satellites from Japan
 
+]
+
+.pull-right[
+
+ALOS (Advanced Land Observing Satellite) Project is a series of Japanese earth observation satellites. The latest one was *supposed to be* the ALOS-3 satellite.
+
+There have been 2 satellites that have been launched in the past - ALOS 1 and 2.
+
+ALOS 3 has failed to launch, and ALOS 4 is under development.
+
+These satellites are a combination of SAR satellites and optical imagery observation satellites - they make up the main satellites for Japanese earth observation.
+
+]
 
 ---
 
-# The Satellites
+## The Satellites
 
 
 .pull-left[
 
 #### ALOS (Daichi)
 
-![ALOS Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image.png)
-
+&lt;img src="https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -69,7 +75,8 @@ Earth observation satellites from Japan
 
 #### ALOS-2 (Daichi-2)
 
-![ALOS-2 Satellite](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-11.png)
+
+&lt;img src="https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-11.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -90,74 +97,92 @@ Earth observation satellites from Japan
 - Sensor: PALSAR-2 (Active Radar)
 - Launched as successor to the PALSAR radar in ALOS
 
-&gt; *'Daichi'*: 「**大地**」'land'
+&gt; The name *'Daichi'*: 「**大地**」literally means **land**
 
-Sources: &lt;a name=cite-jaxa2023a&gt;&lt;/a&gt;[JAXA (2023a)](#bib-jaxa2023a), &lt;a name=cite-jaxa2024&gt;&lt;/a&gt;[JAXA (2024)](#bib-jaxa2024), &lt;a name=cite-nasaearthsciencedatasystems2020&gt;&lt;/a&gt;[NASA Earth Science Data Systems (2020)](#bib-nasaearthsciencedatasystems2020)
+Sources: [JAXA (2023a)](#bib-jaxa2023a), [JAXA (2024)](#bib-jaxa2024), [NASA Earth Science Data Systems (2020)](#bib-nasaearthsciencedatasystems2020)
 
 ]
 
 ---
 
-# Future projects
+## Future projects
 
 .pull-left[
 
 #### ALOS-3 (failed)
 
-![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/06/top_image.png)
+&lt;img src="https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/06/top_image.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+#### ALOS-4
+
+&lt;img src="https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-left[
 
 - Launched in 2023, but failed
 - Sensor: 6 bands (including RGB, NIR)
 - Had a spatial resolution of 0.7 m
 - Designed as a successor to the AVENIR in ALOS; loss of this satellite cast a shadow in the future earth observation
 
-
 ]
 
-
 .pull-right[
-
-#### ALOS-4
-
-![](https://www.satnavi.jaxa.jp/ja/wp-content/uploads/sites/3/2021/07/top_image-1.png)
 
 - Planned launch in 2024
 - Sensor: Radar
 - Planned as successor to ALOS-2
 - Cannot be a substitute for the loss of ALOS-3, due to the difference in bands.
 
-Source: 
+Source: ([JAXA, 2023b](#bib-jaxa2023); [JAXA, 2024](#bib-jaxa2024))
 
 ]
 
 ---
 
-# Applications: Disaster observation
-
-Observing of disasters is one of the focus areas by ALOS. &lt;a name=cite-jaxa2011&gt;&lt;/a&gt;&lt;a name=cite-jaxa2011a&gt;&lt;/a&gt;([JAXA, 2011b](#bib-jaxa2011); [JAXA, 2011a](#bib-jaxa2011a))
+## Applications: Disaster observation
 
 #### Aftermath of the Great East Japan Earthquake (2011)
 
-![](https://www.eorc.jaxa.jp/ALOS/new/opt_110328_tohoku/l_dis_av2_tohokueq_110328_f8.jpg)
+Observing of disasters is one of the focus areas by ALOS. ([JAXA, 2011b](#bib-jaxa2011); [JAXA, 2011a](#bib-jaxa2011a))
+
+
+&lt;img src="https://www.eorc.jaxa.jp/ALOS/new/opt_110328_tohoku/l_dis_av2_tohokueq_110328_f8.jpg" width="70%" style="display: block; margin: auto;" /&gt;
 
 The image of the coastline near Natori, Miyagi, Japan. Image taken 2 weeks after (left), 3 days after (centre), and before the earthquake and tsunami (right). We can see the tsunami-impacted ares in the centre, and the flooding ceased after 2 weeks.
 
 ---
 
-# Applications: Vegetation analysis
+## Applications: Vegetation analysis
 
+&lt;img src="https://www.eorc.jaxa.jp/ALOS/jp/dataset/images/Global_fnf-mosaic_2019-2017.jpg" width="70%" style="display: block; margin: auto;" /&gt;
 
-![](https://www.eorc.jaxa.jp/ALOS/jp/dataset/images/Global_fnf-mosaic_2019-2017.jpg)
-
-Deforestation occuring worldwide has been observed, using the Radar image from Daichi-2. Downloadable for further research and analysis.
+Deforestation occuring worldwide has been observed, using the Radar image from Daichi-2.
+[Whittle, Quegan, Uryu et al. (2012)](#bib-whittle2012) explored the deforestation of Sumatra, Indonesia using this dataset - an automatic deforestation detection was made possible, enabling them for simultaneous detection.
 
 ---
 
-# Reflection
+## Applications: Notes
+
+The 2 research papers I have found using the ALOS data are both in Asia.
+
+Being the Japanese alternative to the NASA and ESA ovservations, it may be interesting to figure out whether there is a regional preference toward using these observations compared to the alternatives.
+
+There seems to be a lot of research comparing the observations of the multiple suites of satellites.
+
+
+---
+
+## Reflection
 
 The ALOS projects have contributed to the growth of Japanese earth observation, with observation available for various wavelengths.
 
-Disaster observation is of importance to the Japanese community as a whole. Global observation enables analysis for disasters worldwide, recent example being the earthquake in Turkey &lt;a name=cite-jaxa2023&gt;&lt;/a&gt;([JAXA, 2023b](#bib-jaxa2023)).
+Disaster observation is of importance to the Japanese community as a whole. Global observation enables analysis for disasters worldwide, recent example being the earthquake in Turkey ([JAXA, 2023b](#bib-jaxa2023)).
 
 The failure of ALOS-3 may impact the earth observation of Japan, especially with the importance lying in disaster management that happens every once in a while.
 
@@ -169,40 +194,39 @@ I personally feel proud my country is using their own satellites for earth obser
 
 ---
 
-# References
+## References
 
-
-```
-## Warning: jaxa2024: unknown macro '\textbar'
-```
-
-&lt;a name=bib-jaxa2011&gt;&lt;/a&gt;[JAXA](#cite-jaxa2011) (2011b). _Emergency
-Observation of Magnitude-9.0 Earthquake off the Pacific coast of
-Tohoku-Kanto District in Japan in 2011 by AVNIR-2 onboard "Daichi"
-(ALOS)_.
+&lt;a name=bib-jaxa2011&gt;&lt;/a&gt;[JAXA](#cite-jaxa2011) (2011b). _Emergency Observation of Magnitude-9.0
+Earthquake off the Pacific Coast of Tohoku-Kanto District in Japan in 2011 by AVNIR-2 Onboard
+"Daichi" (ALOS)_. https://www.eorc.jaxa.jp/ALOS/en/img\_ up/dis\_ opt\_ tohokueq\_110314.htm.
 
 &lt;a name=bib-jaxa2011a&gt;&lt;/a&gt;[JAXA](#cite-jaxa2011a) (2011a).
 _陸域観測技術衛星「だいち」(ALOS)による東日本大震災の緊急観測結果(21)_.
+https://www.eorc.jaxa.jp/ALOS/img\_ up/jdis\_ opt\_ tohokueq\_110328.htm.
 
-&lt;a name=bib-jaxa2023&gt;&lt;/a&gt;[JAXA](#cite-jaxa2023) (2023b). _ALOS-2
-observations of earthquakes in southeastern Turkey in 2023 (Updated on
-March 2) – JAXA Earth-graphy / Space Technology Directorate I_.
+&lt;a name=bib-jaxa2023&gt;&lt;/a&gt;[JAXA](#cite-jaxa2023) (2023b). _ALOS-2 Observations of Earthquakes in
+Southeastern Turkey in 2023 (Updated on March 2) - JAXA Earth-graphy / Space Technology
+Directorate I_. https://earth.jaxa.jp/en/earthview/2023/02/14/7381/index.html.
 
-&lt;a name=bib-jaxa2023a&gt;&lt;/a&gt;[JAXA](#cite-jaxa2023a) (2023a). _JAXA
-Satellite Navigator / Space Technology Directorate I_.
+&lt;a name=bib-jaxa2023a&gt;&lt;/a&gt;[JAXA](#cite-jaxa2023a) (2023a). _JAXA Satellite Navigator / Space
+Technology Directorate I_. https://www.satnavi.jaxa.jp/en/.
 
-&lt;a name=bib-jaxa2024&gt;&lt;/a&gt;[JAXA](#cite-jaxa2024) (2024). _Dataset
-\textbar ALOS@EORC_. En.
+&lt;a name=bib-jaxa2024&gt;&lt;/a&gt;[JAXA](#cite-jaxa2024) (2024). _Dataset \textbar ALOS@EORC_.
+https://www.eorc.jaxa.jp/ALOS/en/index\_ e.htm.
 
-&lt;a name=bib-nasaearthsciencedatasystems2020&gt;&lt;/a&gt;[NASA Earth Science
-Data Systems](#cite-nasaearthsciencedatasystems2020) (2020). _What is
-Synthetic Aperture Radar?_ En. Backgrounder Publisher: Earth Science
-Data Systems, NASA.
+&lt;a name=bib-nasaearthsciencedatasystems2020&gt;&lt;/a&gt;[NASA Earth Science Data
+Systems](#cite-nasaearthsciencedatasystems2020) (2020). _What Is Synthetic Aperture Radar?_
+https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar. Backgrounder
+
+&lt;a name=bib-whittle2012&gt;&lt;/a&gt;[Whittle, M., S. Quegan, Y. Uryu, et al.](#cite-whittle2012) (2012).
+"Detection of Tropical Deforestation Using ALOS-PALSAR: A Sumatran Case Study". In: _Remote
+Sensing of Environment_ 124, pp. 83-98.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"ratio": "16:9",
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false
